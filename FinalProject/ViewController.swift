@@ -16,6 +16,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private var month = [MonthString]()
     private let realm = try! Realm()
     
+    //public var deletionHandler: (() -? Void)?
+    
     //SideMenu
     var sideMenu: SideMenuNavigationController?
     
@@ -50,6 +52,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //cell.delegate = self
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: UI) -> UITableView {
+//        return .delete
+//    }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -86,7 +96,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func didTapMenu() {
         present(sideMenu!, animated: true)
     }
-    
 }
 
 class MenuListController: UITableViewController {
@@ -118,7 +127,10 @@ class MenuListController: UITableViewController {
            
            //add function
        }
+
 }
+
+
 
 ////TableView: Month
 //extension ViewController: UITableViewDelegate{
