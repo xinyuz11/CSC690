@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  FinalProject
-//
-//  Created by xinyu on 5/19/20.
-//  Copyright © 2020 xinyu. All rights reserved.
-//
 
 import UIKit
 import CoreData
