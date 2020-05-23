@@ -1,0 +1,34 @@
+PODS:
+  - FSCalendar (2.8.1)
+  - Realm (5.0.0):
+    - Realm/Headers (= 5.0.0)
+  - Realm/Headers (5.0.0)
+  - RealmSwift (5.0.0):
+    - Realm (= 5.0.0)
+  - SCLAlertView (0.8)
+  - SideMenu (6.4.8)
+
+DEPENDENCIES:
+  - FSCalendar
+  - RealmSwift
+  - SCLAlertView
+  - SideMenu
+
+SPEC REPOS:
+  trunk:
+    - FSCalendar
+    - Realm
+    - RealmSwift
+    - SCLAlertView
+    - SideMenu
+
+SPEC CHECKSUMS:
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
+  Realm: 76066d333de26f97e9caedaa85ee3ff4a62ca265
+  RealmSwift: c1bdff09b422569dc6881410d9ccf712bcdb79b0
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+
+PODFILE CHECKSUM: 51d7c204894ef39a97df415f78d6557d0a0f4def
+
+COCOAPODS: 1.9.1
