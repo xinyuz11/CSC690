@@ -6,7 +6,6 @@ class EventViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var field: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
     
-    
     private let realm = try! Realm()
     public var completionHandler: (() -> Void)?
     

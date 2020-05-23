@@ -6,22 +6,20 @@ class MonthString: Object {
     
     @objc dynamic var item: String = ""
     @objc dynamic var date: Date = Date()
-    
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let transition = SlideTrans()
     
     //TableView: Month
     @IBOutlet var tableView: UITableView!
     private var month = [MonthString]()
     private let realm = try! Realm()
     
-    //public var deletionHandler: (() -? Void)?
-    
     //SideMenu
     var sideMenu: SideMenuNavigationController?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,12 +30,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         
         //SideMenu
-        sideMenu = SideMenuNavigationController(rootViewController: MenuListController())
+        //sideMenu = SideMenuNavigationController(rootViewController: MenuListController())
         sideMenu?.leftSide = true
         sideMenu?.setNavigationBarHidden(true, animated: false)
         
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,16 +52,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: UI) -> UITableView {
-//        return .delete
-//    }
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let itemTask = month[indexPath.row]
+        guard let vc = storyboard?.instantiateViewController(identifier: "grid") as? GridViewController else {
+            return
+        }
+        vc.item = itemTask
+        vc.deletionHandler = { [weak self] in
+            self?.refresh()
+        }
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.title = itemTask.item
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     @IBAction func didTapMonthButton() {
@@ -89,46 +92,57 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func refresh() {
         month = realm.objects(MonthString.self).map({ $0 })
         tableView.reloadData()
-        
     }
     
     //SideMenu
-    @IBAction func didTapMenu() {
+    @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
+        
+        guard let vc = storyboard?.instantiateViewController(identifier: "sidemenucell") as? SideMenuViewController else {return}
+        vc.didTapMenuType = { menuType in
+            self.transitionToNewContent(menuType)
+        }
+        vc.modalPresentationStyle = .overCurrentContext
+        //sidevc.transitioningDelegate = self
         present(sideMenu!, animated: true)
     }
+    func transitionToNewContent(_ menuType: MenuType) {
+        let title = String(describing: menuType).capitalized
+        self.title = title
+    }
 }
-
-class MenuListController: UITableViewController {
-    
-    var menuItem = ["May"]
-    let darkColor = UIColor(red: 59/255, green: 76/255, blue: 94/255, alpha: 1)
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.backgroundColor = darkColor
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuItem.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = menuItem[indexPath.row]
-        cell.textLabel?.textColor = .white
-        cell.backgroundColor = darkColor
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           tableView.deselectRow(at: indexPath, animated: true)
-           
-           //add function
-       }
-
-}
+//
+//class MenuListController: UITableViewController {
+//
+//    var menuItem = ["May", "Theme1", "Theme2"]
+//    let darkColor = UIColor(red: 59/255, green: 76/255, blue: 94/255, alpha: 1)
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        tableView.backgroundColor = darkColor
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return menuItem.count
+//    }
+//
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        cell.textLabel?.text = menuItem[indexPath.row]
+//        cell.textLabel?.textColor = .white
+//        cell.backgroundColor = darkColor
+//        return cell
+//    }
+//
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//           tableView.deselectRow(at: indexPath, animated: true)
+//
+//           //add function
+//        //tableView.bringSubviewToFront(UIButton)
+//       }
+//
+//}
 
 
 

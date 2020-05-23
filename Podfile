@@ -10,6 +10,7 @@ target 'FinalProject' do
 pod 'SideMenu'
 pod 'FSCalendar'
 pod 'RealmSwift'
+pod 'SCLAlertView'
 
 
 

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F6AD10F24778EFE00E978ED /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6AD10D24778EFE00E978ED /* GridViewController.swift */; };
+		6F6AD11024778EFE00E978ED /* GridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F6AD10E24778EFE00E978ED /* GridViewController.xib */; };
 		6FAE4B7624746C8100A08EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE4B7524746C8100A08EE1 /* AppDelegate.swift */; };
 		6FAE4B7824746C8100A08EE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE4B7724746C8100A08EE1 /* SceneDelegate.swift */; };
 		6FAE4B7A24746C8100A08EE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE4B7924746C8100A08EE1 /* ViewController.swift */; };
@@ -20,6 +22,10 @@
 		6FAE4BAB247471FF00A08EE1 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FAE4BA9247471FF00A08EE1 /* EventViewController.xib */; };
 		6FAE4BAE2474722200A08EE1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE4BAC2474722200A08EE1 /* CalendarViewController.swift */; };
 		6FAE4BAF2474722200A08EE1 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FAE4BAD2474722200A08EE1 /* CalendarViewController.xib */; };
+		6FC7C0692478629C00669A4B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7C0682478629C00669A4B /* SideMenuViewController.swift */; };
+		6FC7C06B24789E2800669A4B /* ListTaskinCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7C06A24789E2800669A4B /* ListTaskinCViewController.swift */; };
+		6FC7C06D2478C43600669A4B /* SlideTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7C06C2478C43600669A4B /* SlideTrans.swift */; };
+		6FC7C06F2478CEDC00669A4B /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7C06E2478CEDC00669A4B /* SleepViewController.swift */; };
 		FF61923C8DF197C54E632A6C /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFEF7FE001895B2BB3953A7 /* Pods_FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		10456A938730E03DA9FBD57E /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		6F6AD10D24778EFE00E978ED /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		6F6AD10E24778EFE00E978ED /* GridViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridViewController.xib; sourceTree = "<group>"; };
 		6FAE4B7224746C8100A08EE1 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FAE4B7524746C8100A08EE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FAE4B7724746C8100A08EE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +69,10 @@
 		6FAE4BA9247471FF00A08EE1 /* EventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
 		6FAE4BAC2474722200A08EE1 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		6FAE4BAD2474722200A08EE1 /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		6FC7C0682478629C00669A4B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		6FC7C06A24789E2800669A4B /* ListTaskinCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskinCViewController.swift; sourceTree = "<group>"; };
+		6FC7C06C2478C43600669A4B /* SlideTrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTrans.swift; sourceTree = "<group>"; };
+		6FC7C06E2478CEDC00669A4B /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
 		D1A72CAF8CCDB17861DEABB2 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FEFEF7FE001895B2BB3953A7 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +140,12 @@
 				6FAE4BA9247471FF00A08EE1 /* EventViewController.xib */,
 				6FAE4BAC2474722200A08EE1 /* CalendarViewController.swift */,
 				6FAE4BAD2474722200A08EE1 /* CalendarViewController.xib */,
+				6F6AD10D24778EFE00E978ED /* GridViewController.swift */,
+				6F6AD10E24778EFE00E978ED /* GridViewController.xib */,
+				6FC7C0682478629C00669A4B /* SideMenuViewController.swift */,
+				6FC7C06A24789E2800669A4B /* ListTaskinCViewController.swift */,
+				6FC7C06C2478C43600669A4B /* SlideTrans.swift */,
+				6FC7C06E2478CEDC00669A4B /* SleepViewController.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -164,7 +182,6 @@
 				D1A72CAF8CCDB17861DEABB2 /* Pods-FinalProject.debug.xcconfig */,
 				10456A938730E03DA9FBD57E /* Pods-FinalProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -276,6 +293,7 @@
 			files = (
 				6FAE4B8524746C8300A08EE1 /* LaunchScreen.storyboard in Resources */,
 				6FAE4BAF2474722200A08EE1 /* CalendarViewController.xib in Resources */,
+				6F6AD11024778EFE00E978ED /* GridViewController.xib in Resources */,
 				6FAE4BAB247471FF00A08EE1 /* EventViewController.xib in Resources */,
 				6FAE4B8224746C8300A08EE1 /* Assets.xcassets in Resources */,
 				6FAE4B7D24746C8100A08EE1 /* Main.storyboard in Resources */,
@@ -345,9 +363,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC7C06D2478C43600669A4B /* SlideTrans.swift in Sources */,
+				6FC7C0692478629C00669A4B /* SideMenuViewController.swift in Sources */,
+				6FC7C06F2478CEDC00669A4B /* SleepViewController.swift in Sources */,
 				6FAE4BAE2474722200A08EE1 /* CalendarViewController.swift in Sources */,
 				6FAE4BAA247471FF00A08EE1 /* EventViewController.swift in Sources */,
+				6FC7C06B24789E2800669A4B /* ListTaskinCViewController.swift in Sources */,
 				6FAE4B7A24746C8100A08EE1 /* ViewController.swift in Sources */,
+				6F6AD10F24778EFE00E978ED /* GridViewController.swift in Sources */,
 				6FAE4B7624746C8100A08EE1 /* AppDelegate.swift in Sources */,
 				6FAE4B8024746C8100A08EE1 /* FinalProject.xcdatamodeld in Sources */,
 				6FAE4B7824746C8100A08EE1 /* SceneDelegate.swift in Sources */,
@@ -533,7 +556,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-90.FinalProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -551,7 +574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-90.FinalProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
